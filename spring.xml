@@ -6,9 +6,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
 >
-	<bean id="mobile" class=" com.tw.Tech.Mobile">
+	<bean id="mobile" class=" com.tw.Tech.Mobile"
+	init-method="start" destroy-method="end">
+	
 		<constructor-arg name="brandName" value="Apple"></constructor-arg>
 		<constructor-arg name="price" value="100000"></constructor-arg>
+	
 	</bean>
-	<!--<bean id="insure" class="com.tw.services.Mobile"></bean>-->
 </beans>
