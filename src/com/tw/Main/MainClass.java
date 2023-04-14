@@ -9,8 +9,11 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		FileSystemXmlApplicationContext f = new FileSystemXmlApplicationContext("spring.xml");
-		Insure i = f.getBean("mobile",Mobile.class);
-		i.getEMI();
+		Insure i = f.getBean("mobile", Insure.class);
+
+		Insure n = f.getBean("single",Insure.class);
+	i.getEMI();
+		n.getData();
 		f.close();
 	}
 }

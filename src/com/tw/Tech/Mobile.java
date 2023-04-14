@@ -7,20 +7,28 @@ public class Mobile implements Insure {
 	private int price;
 
 	public Mobile(String brandName, int price) {
-		//super();
+		// super();
 		this.brandName = brandName;
 		this.price = price;
 	}
 
 	@Override
 	public void getEMI() {
-		System.out.println(" New "+this.brandName+" => "+this.price);
+		System.out.println(" New " + this.brandName + " => " + this.price);
 	}
+
 	public void start() {
 		System.out.println("Switch on");
+
+	}
+
+	public void end() {
+		System.out.println("Switch off");
+	}
+
+	@Override
+	public void getData() {
+		System.out.println("hi");
 		
 	}
-  public void end() {
-	  System.out.println("Switch off");
-  }
 }

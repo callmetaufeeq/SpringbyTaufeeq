@@ -7,10 +7,23 @@
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
 >
 	<bean id="mobile" class=" com.tw.Tech.Mobile"
-	init-method="start" destroy-method="end">
+	init-method="start" destroy-method="end" >
 	
+			
 		<constructor-arg name="brandName" value="Apple"></constructor-arg>
 		<constructor-arg name="price" value="100000"></constructor-arg>
-	
+		
+	<!--bean id="mobile" class=" com.tw.Tech.Mobile" scope="singleton">
+		<property name="brandName" value="Apple"></property>
+		<property name="price" value="100000"></property>
+		<property name="offer" value="50% off because of Ramazan"></property-->
+	</bean>
+	<bean id="single" class="com.tw.Scope.Singleton">
+		<property name="a" value="1"></property>
+		<property name="b" value="2"></property>
+	</bean>
+	<bean id="prototype" class="com.tw.Scope.Singleton" scope="prototype">
+		<property name="a" value="1"></property>
+		<property name="b" value="2"></property>
 	</bean>
 </beans>
